@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ideku Hari Ini</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #fff0f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #b03060;
+    }
+
+    .sub {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+
+    .output {
+      margin-top: 30px;
+      font-size: 18px;
+      font-style: italic;
+      color: #333;
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body>
+  <h1>🖋️ Ideku Hari Ini</h1>
+  <p class="sub">Klik tombol di bawah ini untuk mendapatkan ide menulis acak.</p>
+  <button onclick="generateIdea()">Dapatkan Ide</button>
+  <div class="output" id="output">...</div>
+
+  <script>
+    const ideas = [
+      "Tulis surat kepada dirimu 5 tahun lalu.",
+      "Karakter utama terbangun dan mendapati dunia tidak mengenalnya.",
+      "Puisi dari sudut pandang langit malam.",
+      "Cerita cinta yang tidak pernah saling mengungkapkan rasa.",
+      "Tulisan tentang orang asing yang menyelamatkanmu di mimpi.",
+      "Karakter yang berbicara dengan pantulan cerminnya.",
+      "Awali cerita dengan kalimat: 'Aku masih menunggu.'",
+      "Dialog imajinatif antara 'Aku' dan 'Rasa Lelah'.",
+      "Sajak untuk seseorang yang tidak bisa kamu miliki.",
+      "Tulisan tentang suara yang hanya kamu dengar di jam 3 pagi."
+    ];
+
+    function generateIdea() {
+      const idea = ideas[Math.floor(Math.random() * ideas.length)];
+      document.getElementById("output").innerText = idea;
+    }
+  </script>
+</body>
+</html>
